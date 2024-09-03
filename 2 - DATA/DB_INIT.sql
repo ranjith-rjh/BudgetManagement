@@ -16,7 +16,7 @@ DROP VIEW IF EXISTS vue_Sous_Categorie CASCADE;
 create table CATEGORIE (
    ID_CATEGORIE         INT4                 not null,
    CAT_ID_CATEGORIE     INT4,
-   NAME_CATEGORIE       VARCHAR(50)          null,
+   NAME_CATEGORIE       VARCHAR(50)          not null,
    constraint PK_CATEGORIE primary key (ID_CATEGORIE)
 );
 
@@ -25,7 +25,7 @@ create table CATEGORIE (
 /*==============================================================*/
 create table FIXES (
    ID_FIXES             INT4                 not null,
-   NAME_FIXES           VARCHAR(20)          null,
+   NAME_FIXES           VARCHAR(20)          not null,
    constraint PK_FIXES primary key (ID_FIXES)
 );
 
@@ -33,15 +33,15 @@ create table FIXES (
 /* Table : FLUX                                                 */
 /*==============================================================*/
 create table FLUX (
-   ID_FLUX              INT4                 not null,
-   ID_TYPE_FLUX         INT4                 not null,
+   ID_FLUX              SERIAL                 not null,
    ID_PERIODE           INT4                 not null,
+   ID_TYPE_FLUX         INT4                 not null,
    ID_FIXES             INT4                 not null,
-   ID_CATEGORIE         INT4                 null,
-   DATE_FLUX            DATE                 null,
-   MONTANT              DECIMAL(10,5)        null,
-   DESCRIPTION          VARCHAR(1500)        null,
+   ID_CATEGORIE         INT4                 not null,
+   DATE_FLUX            DATE                 not null,
+   MONTANT              DECIMAL(10,5)        not null,
    TAGS                 VARCHAR(500)         null,
+   DESCRIPTION          VARCHAR(1500)        null,
    constraint PK_FLUX primary key (ID_FLUX)
 );
 
@@ -50,7 +50,7 @@ create table FLUX (
 /*==============================================================*/
 create table PERIODE (
    ID_PERIODE           INT4                 not null,
-   NAME_PERIODE          VARCHAR(20)          null,
+   NAME_PERIODE          VARCHAR(20)         not null,
    constraint PK_PERIODE primary key (ID_PERIODE)
 );
 
@@ -59,7 +59,7 @@ create table PERIODE (
 /*==============================================================*/
 create table TYPE_FLUX (
    ID_TYPE_FLUX         INT4                 not null,
-   NAME_TYPE_FLUX       VARCHAR(20)          null,
+   NAME_TYPE_FLUX       VARCHAR(20)          not null,
    constraint PK_TYPE_FLUX primary key (ID_TYPE_FLUX)
 );
 
