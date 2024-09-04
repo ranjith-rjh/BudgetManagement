@@ -3,7 +3,7 @@
 import tkinter as tk
 import customtkinter as ctk
 import psycopg2
-from Classes import *
+from classes import *
 
 # Créer la classe App
 

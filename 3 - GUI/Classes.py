@@ -7,10 +7,6 @@ That way we are able to request query on the database and create Python objects.
 Once done it will be easier to manipulate objects
 '''
 
-'''
-Class : Fixes
-'''
-
 class Periode :
     
     def __init__(self, id_periode, name_periode) :

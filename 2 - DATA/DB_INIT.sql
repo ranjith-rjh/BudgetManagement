@@ -9,6 +9,7 @@ DROP VIEW IF EXISTS vue_Fixes CASCADE;
 DROP VIEW IF EXISTS vue_Type_Flux CASCADE;
 DROP VIEW IF EXISTS vue_Categorie CASCADE;
 DROP VIEW IF EXISTS vue_Sous_Categorie CASCADE;
+DROP VIEW IF EXISTS vue_Flux CASCADE;
 
 /*==============================================================*/
 /* Table : CATEGORIE                                            */
@@ -115,6 +116,46 @@ CREATE OR REPLACE VIEW vue_Sous_Categorie AS
       JOIN CATEGORIE c2 ON c1.CAT_ID_CATEGORIE = c2.ID_CATEGORIE
    WHERE c1.CAT_ID_CATEGORIE IS NOT NULL;
 
+CREATE OR REPLACE VIEW vue_Flux AS
+   SELECT f.id_flux AS "ID Flux", p.name_periode AS "Période", tf.name_type_flux AS "Type de flux", fi.name_fixes AS "Fixes", cp.name_categorie AS "Catégorie", c.name_categorie AS "Sous-catégorie", f.date_flux AS "Date", f.montant as "Montant", f.tags AS "Tags", f.description AS "Description"
+   FROM flux f
+      JOIN periode p ON f.id_periode = p.id_periode
+      JOIN type_flux tf ON f.id_type_flux = tf.id_type_flux
+      JOIN fixes fi ON f.id_fixes = fi.id_fixes
+      JOIN categorie c ON f.id_categorie = c.id_categorie
+      JOIN categorie cp ON c.cat_id_categorie = cp.id_categorie;
+
+
+/*==============================================================*/
+/* CREATE PROCEDURE                                             */
+/*==============================================================*/
+
+CREATE OR REPLACE PROCEDURE ps_export_table_to_csv()
+AS
+$$
+DECLARE
+BEGIN 
+   COPY PERIODE 
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\PERIODE.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY TYPE_FLUX
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\TYPE_FLUX.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY FIXES 
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\FIXES.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY CATEGORIE
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\CATEGORIE.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY FLUX 
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\FLUX.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+END;
+$$ LANGUAGE 'plpgsql'
 
 /*==============================================================*/
 /* INSERT DATA                                                  */
