@@ -155,7 +155,7 @@ BEGIN
    TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\FLUX.csv' 
    WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
 END;
-$$ LANGUAGE 'plpgsql'
+$$ LANGUAGE 'plpgsql';
 
 /*==============================================================*/
 /* INSERT DATA                                                  */
