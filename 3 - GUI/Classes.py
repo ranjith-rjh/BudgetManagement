@@ -169,9 +169,11 @@ class Categorie :
         return categorie_enfants
     
     def get_id_by_name(name, list) :
+        res = []
         for row in list :
             if row.name_categorie == name :
-                return row.id_categorie
+                res.append(row.id_categorie)
+        return res[-1]
             
     def get_name_by_id(id, list) :
         for row in list : 
