@@ -123,14 +123,26 @@ CREATE OR REPLACE VIEW vue_Flux AS
       JOIN type_flux tf ON f.id_type_flux = tf.id_type_flux
       JOIN fixes fi ON f.id_fixes = fi.id_fixes
       JOIN categorie c ON f.id_categorie = c.id_categorie
-      JOIN categorie cp ON c.cat_id_categorie = cp.id_categorie;
+      JOIN categorie cp ON c.cat_id_categorie = cp.id_categorie
+   ORDER BY 1;
+
+CREATE OR REPLACE VIEW vue_Flux_MAct AS
+   SELECT f.id_flux AS "ID Flux", p.name_periode AS "Période", tf.name_type_flux AS "Type de flux", fi.name_fixes AS "Fixes", cp.name_categorie AS "Catégorie", c.name_categorie AS "Sous-catégorie", f.date_flux AS "Date", f.montant as "Montant", f.tags AS "Tags", f.description AS "Description"
+   FROM flux f
+      JOIN periode p ON f.id_periode = p.id_periode
+      JOIN type_flux tf ON f.id_type_flux = tf.id_type_flux
+      JOIN fixes fi ON f.id_fixes = fi.id_fixes
+      JOIN categorie c ON f.id_categorie = c.id_categorie
+      JOIN categorie cp ON c.cat_id_categorie = cp.id_categorie
+   WHERE f.date_flux >= date_trunc('month', NOW())::date
+   ORDER BY 1;
 
 
 /*==============================================================*/
 /* CREATE PROCEDURE                                             */
 /*==============================================================*/
 
-CREATE OR REPLACE PROCEDURE ps_export_table_to_csv()
+CREATE OR REPLACE PROCEDURE ps_save_csv()
 AS
 $$
 DECLARE
@@ -153,6 +165,14 @@ BEGIN
 
    COPY FLUX 
    TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\FLUX.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY (SELECT * FROM vue_Flux) 
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\VUE_FLUX.csv' 
+   WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
+
+   COPY (SELECT * FROM vue_Flux_MAct) 
+   TO 'R:\CODES\BudgetManagement\2 - DATA\BACKUP\VUE_FLUX_MAct.csv' 
    WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';', QUOTE '''');
 END;
 $$ LANGUAGE 'plpgsql';

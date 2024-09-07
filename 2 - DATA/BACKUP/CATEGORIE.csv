@@ -1,0 +1,113 @@
+id_categorie;cat_id_categorie;name_categorie
+1;;Courses
+2;;Mode
+3;;Esthétique
+4;;Hygiène
+5;;Abonnement
+6;;Transports
+7;;Logement
+8;;Aide
+9;;Divertissement
+10;;Emprunt
+11;;Emploi
+12;;Epargne
+13;;Impôts
+14;;Santé
+15;;Autre
+16;;Cadeau
+17;1;Viandes
+18;1;Fromages
+19;1;Légumes
+20;1;Fruits
+21;1;Sauces
+22;1;Café
+23;1;Sucrerie
+24;1;Pain
+25;1;Desserts
+26;1;Féculents
+27;1;Epices
+28;1;Apéritifs
+29;1;Soda
+30;1;Alcool
+31;1;Jus
+32;1;Sirop
+33;1;Lait
+34;2;Haut
+35;2;T-shirt
+36;2;Bas
+37;2;Sous-Vêtements
+38;2;Chaussures
+39;2;Chaussettes
+40;2;Accessoires
+41;2;Pyjama
+42;3;Shampoing
+43;3;Gel
+44;3;Visage
+45;3;Dentaire
+46;3;Crème
+47;3;Coiffeur
+48;3;Savon
+49;4;Lessive
+50;4;Vaisselle
+51;4;Ménage
+52;4;Sanitaire
+53;4;Oreiller
+54;4;Taies oreiller
+55;4;Couette
+56;4;Housse de couette
+57;4;Drap Housse
+58;4;Protège Oreiller
+59;4;Protège Matelas
+60;5;Streaming
+61;5;Sports
+62;5;Internet
+63;5;Mobile
+64;6;Carburant
+65;6;Huile Moteur
+66;6;Assurance véhicule
+67;6;Garage
+68;6;Entretien véhicule
+69;6;Autoroute
+70;6;Bus
+71;6;Tram
+72;6;Train
+73;6;Avion
+74;6;Covoiturage
+75;6;Vélo
+76;6;Parking
+77;7;Loyer
+78;7;Eau
+79;7;Electricité
+80;7;Chauffage
+81;7;Assurance logement
+82;7;Copropriété
+83;8;APL
+84;8;CAF
+85;8;Mobili-Jeune
+86;9;Cinéma
+87;9;Restauration
+88;9;Cantine
+89;9;Brasserie
+90;9;Vacances
+91;9;Jeux-vidéos
+92;9;Café
+93;9;Boulangerie
+94;9;Informatique
+95;10;Famille
+96;10;Ami
+97;10;Bancaire
+98;11;Salaire
+99;11;Primes
+100;11;Chèques cadeaux
+101;11;Chèques vacances
+102;12;Livret A
+103;12;Revolut
+104;12;Espèces
+105;12;Actions
+106;12;BoursoBank
+107;13;Impôts
+108;14;Santé
+109;15;Autre
+110;16;Don
+111;16;Famille
+112;16;Ami

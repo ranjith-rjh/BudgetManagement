@@ -175,7 +175,8 @@ class App(ctk.CTk) :
         v_id_type_flux = Type_Flux.get_id_by_name(self.type_flux_input.get(), type_flux_instances)
         v_id_fixes = Fixes.get_id_by_name(self.fixes_input.get(), fixes_instances)
         v_categories = Categorie.get_id_by_name(self.categories_input.get(), categories_instances)
-        v_id_categorie = Categorie.get_id_by_name(self.sous_categories_input.get(), categories_instances)
+        categorie_enfants = Categorie.get_child_list_by_parent_id(v_categories, categories_instances)
+        v_id_categorie = Categorie.get_id_by_name(self.sous_categories_input.get(), categorie_enfants)
 
 
         # Get the values of text boxes
