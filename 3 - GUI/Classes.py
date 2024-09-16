@@ -245,7 +245,15 @@ class Flux :
     
     def insert_flux(flux, cursor, conn) :
         try :
-            print("Entree")
+
+            query = 'SELECT MAX(id_flux) FROM Flux'
+
+            cursor.execute(query)
+
+            for row in cursor.fetchall() :
+                id_flux_max = row[0]
+
+            id_flux_max = id_flux_max + 1
 
             query = f"INSERT INTO FLUX (ID_PERIODE, ID_TYPE_FLUX, ID_FIXES, ID_CATEGORIE, DATE_FLUX, MONTANT, TAGS, DESCRIPTION) \
                 VALUES ({flux.id_periode}, {flux.id_type_flux}, {flux.id_fixes}, {flux.id_categorie}, '{flux.date_flux}', {flux.montant}, '{flux.tags}', '{flux.description}');"
@@ -253,7 +261,7 @@ class Flux :
             cursor.execute(query)
             conn.commit()
 
-            print("INSERTED")
+            print(f'{id_flux_max} - INSERTED : {flux.description}')
 
             return True
         
