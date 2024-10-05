@@ -108,13 +108,15 @@ CREATE OR REPLACE VIEW vue_Type_Flux AS
 CREATE OR REPLACE VIEW vue_Categorie AS
    SELECT ID_CATEGORIE AS "ID Categorie", NAME_CATEGORIE AS "Categorie"
    FROM CATEGORIE
-   WHERE CAT_ID_CATEGORIE IS NULL;
+   WHERE CAT_ID_CATEGORIE IS NULL
+   ORDER BY 1;
 
 CREATE OR REPLACE VIEW vue_Sous_Categorie AS
    SELECT c1.ID_CATEGORIE AS "ID Categorie", c2.NAME_CATEGORIE AS "Categorie", c1.NAME_CATEGORIE AS "Sous-Categorie"
    FROM CATEGORIE c1
       JOIN CATEGORIE c2 ON c1.CAT_ID_CATEGORIE = c2.ID_CATEGORIE
-   WHERE c1.CAT_ID_CATEGORIE IS NOT NULL;
+   WHERE c1.CAT_ID_CATEGORIE IS NOT NULL
+   ORDER BY 1;
 
 CREATE OR REPLACE VIEW vue_Flux AS
    SELECT f.id_flux AS "ID Flux", p.name_periode AS "Période", tf.name_type_flux AS "Type de flux", fi.name_fixes AS "Fixes", cp.name_categorie AS "Catégorie", c.name_categorie AS "Sous-catégorie", f.date_flux AS "Date", f.montant as "Montant", f.tags AS "Tags", f.description AS "Description"
@@ -135,6 +137,7 @@ CREATE OR REPLACE VIEW vue_Flux_MAct AS
       JOIN categorie c ON f.id_categorie = c.id_categorie
       JOIN categorie cp ON c.cat_id_categorie = cp.id_categorie
    WHERE f.date_flux >= date_trunc('month', NOW())::date
+      AND f.date_flux <= (date_trunc('month', NOW()) + interval '1 month - 1 day')::date
    ORDER BY 1;
 
 
@@ -307,3 +310,4 @@ INSERT INTO CATEGORIE(ID_CATEGORIE, CAT_ID_CATEGORIE, NAME_CATEGORIE) VALUES (10
 INSERT INTO CATEGORIE(ID_CATEGORIE, CAT_ID_CATEGORIE, NAME_CATEGORIE) VALUES (110, 16, 'Don');
 INSERT INTO CATEGORIE(ID_CATEGORIE, CAT_ID_CATEGORIE, NAME_CATEGORIE) VALUES (111, 16, 'Famille');
 INSERT INTO CATEGORIE(ID_CATEGORIE, CAT_ID_CATEGORIE, NAME_CATEGORIE) VALUES (112, 16, 'Ami');
+INSERT INTO CATEGORIE(ID_CATEGORIE, CAT_ID_CATEGORIE, NAME_CATEGORIE) VALUES (113, 12, 'Trade Republic');

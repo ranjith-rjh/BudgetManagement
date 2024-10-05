@@ -136,6 +136,7 @@ class Categorie :
         self.id_categorie = id_categorie
         self.id_parent = id_parent
         self.name_categorie = name_categorie
+        # self.target = target
 
 
     def __str__(self) :
@@ -143,7 +144,7 @@ class Categorie :
     
     def get_instances(cursor) :
         categorie = []
-        query = 'SELECT * FROM categorie'
+        query = 'SELECT * FROM categorie ORDER BY 1'
 
         cursor.execute(query)
 

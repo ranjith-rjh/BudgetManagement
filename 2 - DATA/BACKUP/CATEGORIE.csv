@@ -1,5 +1,4 @@
 id_categorie;cat_id_categorie;name_categorie
-1;;Courses
 2;;Mode
 3;;Esthétique
 4;;Hygiène
@@ -58,16 +57,12 @@ id_categorie;cat_id_categorie;name_categorie
 57;4;Drap Housse
 58;4;Protège Oreiller
 59;4;Protège Matelas
-60;5;Streaming
 61;5;Sports
 62;5;Internet
 63;5;Mobile
-64;6;Carburant
 65;6;Huile Moteur
-66;6;Assurance véhicule
 67;6;Garage
 68;6;Entretien véhicule
-69;6;Autoroute
 70;6;Bus
 71;6;Tram
 72;6;Train
@@ -75,7 +70,6 @@ id_categorie;cat_id_categorie;name_categorie
 74;6;Covoiturage
 75;6;Vélo
 76;6;Parking
-77;7;Loyer
 78;7;Eau
 79;7;Electricité
 80;7;Chauffage
@@ -85,8 +79,6 @@ id_categorie;cat_id_categorie;name_categorie
 84;8;CAF
 85;8;Mobili-Jeune
 86;9;Cinéma
-87;9;Restauration
-88;9;Cantine
 89;9;Brasserie
 90;9;Vacances
 91;9;Jeux-vidéos
@@ -95,7 +87,6 @@ id_categorie;cat_id_categorie;name_categorie
 94;9;Informatique
 95;10;Famille
 96;10;Ami
-97;10;Bancaire
 98;11;Salaire
 99;11;Primes
 100;11;Chèques cadeaux
@@ -108,6 +99,16 @@ id_categorie;cat_id_categorie;name_categorie
 107;13;Impôts
 108;14;Santé
 109;15;Autre
+112;16;Ami
+1;;Courses
+60;5;Streaming
+64;6;Carburant
+66;6;Assurance véhicule
+69;6;Autoroute
+77;7;Loyer
+87;9;Restauration
+88;9;Cantine
+97;10;Bancaire
 110;16;Don
 111;16;Famille
-112;16;Ami
+113;12;Trade Republic
