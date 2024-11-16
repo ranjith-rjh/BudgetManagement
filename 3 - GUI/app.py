@@ -1,5 +1,6 @@
 # Importer les modules
 
+import datetime as dt
 import tkinter as tk
 import customtkinter as ctk
 import psycopg2
@@ -99,7 +100,8 @@ class App(ctk.CTk) :
             sticky = 'ew'
         )
 
-        self.date_input = ctk.CTkEntry(master=self, placeholder_text='DD-MM-YYYY')
+        self.date_input = ctk.CTkEntry(master=self)
+        self.date_input.insert(0, today_date)
         self.date_input.grid(
             row = 2, column = 1,
             sticky = 'ew'
@@ -163,7 +165,8 @@ class App(ctk.CTk) :
 
 
     def refresh_sous_categories(self, event) :
-        sous_categories = Categorie.get_child_list_by_parent_name(self.categories_input.get(), categories_instances)
+        categorie_parent_id = Categorie.get_id_by_name(self.categories_input.get(), categorie_parents)
+        sous_categories = Categorie.get_child_list_by_parent_id(categorie_parent_id, categories_instances)
         self.sous_categories_names = Categorie.get_names(sous_categories)
         self.sous_categories_input.configure(True, variable=self.sous_categories_text, values=self.sous_categories_names)
 
@@ -184,6 +187,10 @@ class App(ctk.CTk) :
         v_montant = self.montant_input.get()
         v_tags = self.tags_input.get()
         v_description = self.description_input.get('1.0', 'end-1c')
+
+        # Formatting to accept double quotes
+        v_tags = v_tags.replace("'", "''")
+        v_description = v_description.replace("'", "''")
 
         # Create a Flux object using the collected values
         flux = Flux(
@@ -232,6 +239,8 @@ if __name__ == '__main__' :
 
     categorie_parents = Categorie.get_parent_list(categories_instances)
     categories_parents_names = Categorie.get_names(categorie_parents)
+
+    today_date = dt.datetime.now().date().strftime('%d-%m-%Y')
 
     app = App()
     app.mainloop()
