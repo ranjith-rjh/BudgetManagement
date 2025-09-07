@@ -1,0 +1,17 @@
+(varDate as date) =>
+
+    if
+    Number.RoundDown((Date.DayOfYear(varDate)-(Date.DayOfWeek(varDate, Day.Monday)+1)+10)/7)=0
+
+    then
+    Number.RoundDown((Date.DayOfYear(#date(Date.Year(varDate)-1,12,31))-(Date.DayOfWeek(#date(Date.Year(varDate)-1,12,31), Day.Monday)+1)+10)/7)
+
+    else if
+    (Number.RoundDown((Date.DayOfYear(varDate)-(Date.DayOfWeek(varDate, Day.Monday)+1)+10)/7)=53
+    and (Date.DayOfWeek(#date(Date.Year(varDate),12,31), Day.Monday)+1<4))
+
+    then
+    1
+
+    else
+    Number.RoundDown((Date.DayOfYear(varDate)-(Date.DayOfWeek(varDate, Day.Monday)+1)+10)/7)

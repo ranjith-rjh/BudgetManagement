@@ -1,0 +1,17 @@
+ID Flux;Période;Type de flux;Fixes;Catégorie;Sous-catégorie;Date;Montant;Tags;Description
+1032;Ecole;Entrée;Fixe;Emploi;Salaire;2025-09-01;2389.01000;#salaire;Dernier salaire contrat Tetras
+1033;Ecole;Sortie;Fixe;Epargne;Livret A;2025-09-01;400.00000;#epargne;Epargne début de mois
+1034;Ecole;Sortie;Fixe;Cadeau;Famille;2025-09-01;200.00000;#papa #maman;Cadeau papa et maman
+1035;Ecole;Sortie;Fixe;Logement;Loyer;2025-09-01;390.00000;#loyer;Loyer Septembre 2025
+1036;Ecole;Sortie;Exceptionnel;Epargne;Revolut;2025-09-01;200.00000;#etherum;Pour investir sur Etherum
+1037;Ecole;Entrée;Variable;Emploi;Salaire;2025-09-03;4.00000;#business;BlaBla car
+1038;Ecole;Sortie;Fixe;Abonnement;Mobile;2025-09-01;0.99000;#icloud;Apple ICloud
+1039;Ecole;Sortie;Fixe;Abonnement;Streaming;2025-09-03;14.99000;#netflix;Netflix
+1040;Ecole;Sortie;Variable;Courses;Jus;2025-09-03;7.41000;#pulco;Courses Hyper U Thoiry : Pulco etc.
+1041;Ecole;Sortie;Variable;Divertissement;Brasserie;2025-09-04;4.00000;#coca;Sortie le Bowl avec IAE
+1042;Ecole;Sortie;Variable;Divertissement;Brasserie;2025-09-04;10.00000;#partie1;Sortie le Bowl avec IAE
+1043;Ecole;Sortie;Variable;Divertissement;Brasserie;2025-09-04;10.00000;#partie2;Sortie le Bowl avec IAE
+1044;Ecole;Sortie;Variable;Divertissement;Brasserie;2025-09-04;3.50000;#demi #moi;Sortie Colloc Pub
+1045;Ecole;Sortie;Variable;Divertissement;Brasserie;2025-09-04;7.00000;#demi #moi #arthur;Sortie Colloc Pub
+1046;Ecole;Sortie;Fixe;Transports;Assurance véhicule;2025-09-05;78.82000;#flash;Assurance Macif pour Flash
+1047;Ecole;Entrée;Fixe;Aide;CAF;2025-09-05;259.30000;#caf;Aide APL + Prime d'activité
