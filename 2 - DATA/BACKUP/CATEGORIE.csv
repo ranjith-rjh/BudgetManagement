@@ -1,0 +1,118 @@
+id_categorie;cat_id_categorie;name_categorie;target_montant
+2;;Mode;
+3;;Esthétique;
+4;;Hygiène;
+5;;Abonnement;
+6;;Transports;
+7;;Logement;
+8;;Aide;
+9;;Divertissement;
+10;;Emprunt;
+11;;Emploi;
+12;;Epargne;
+13;;Impôts;
+14;;Santé;
+15;;Autre;
+16;;Cadeau;
+17;1.0;Viandes;
+18;1.0;Fromages;
+19;1.0;Légumes;
+20;1.0;Fruits;
+21;1.0;Sauces;
+22;1.0;Café;
+23;1.0;Sucrerie;
+24;1.0;Pain;
+25;1.0;Desserts;
+26;1.0;Féculents;
+27;1.0;Epices;
+28;1.0;Apéritifs;
+29;1.0;Soda;
+30;1.0;Alcool;
+31;1.0;Jus;
+32;1.0;Sirop;
+33;1.0;Lait;
+34;2.0;Haut;
+35;2.0;T-shirt;
+36;2.0;Bas;
+37;2.0;Sous-Vêtements;
+38;2.0;Chaussures;
+39;2.0;Chaussettes;
+40;2.0;Accessoires;
+41;2.0;Pyjama;
+42;3.0;Shampoing;
+43;3.0;Gel;
+44;3.0;Visage;
+45;3.0;Dentaire;
+46;3.0;Crème;
+47;3.0;Coiffeur;
+48;3.0;Savon;
+49;4.0;Lessive;
+50;4.0;Vaisselle;
+51;4.0;Ménage;
+52;4.0;Sanitaire;
+53;4.0;Oreiller;
+54;4.0;Taies oreiller;
+55;4.0;Couette;
+56;4.0;Housse de couette;
+57;4.0;Drap Housse;
+58;4.0;Protège Oreiller;
+59;4.0;Protège Matelas;
+61;5.0;Sports;
+62;5.0;Internet;
+63;5.0;Mobile;
+65;6.0;Huile Moteur;
+67;6.0;Garage;
+68;6.0;Entretien véhicule;
+70;6.0;Bus;
+71;6.0;Tram;
+72;6.0;Train;
+73;6.0;Avion;
+74;6.0;Covoiturage;
+75;6.0;Vélo;
+76;6.0;Parking;
+78;7.0;Eau;
+79;7.0;Electricité;
+80;7.0;Chauffage;
+81;7.0;Assurance logement;
+82;7.0;Copropriété;
+83;8.0;APL;
+84;8.0;CAF;
+85;8.0;Mobili-Jeune;
+86;9.0;Cinéma;
+89;9.0;Brasserie;
+90;9.0;Vacances;
+91;9.0;Jeux-vidéos;
+92;9.0;Café;
+93;9.0;Boulangerie;
+94;9.0;Informatique;
+95;10.0;Famille;
+96;10.0;Ami;
+98;11.0;Salaire;
+99;11.0;Primes;
+100;11.0;Chèques cadeaux;
+101;11.0;Chèques vacances;
+102;12.0;Livret A;
+103;12.0;Revolut;
+104;12.0;Espèces;
+105;12.0;Actions;
+106;12.0;BoursoBank;
+107;13.0;Impôts;
+108;14.0;Santé;
+109;15.0;Autre;
+112;16.0;Ami;
+113;12.0;Trade Republic;
+1;;Courses;100.00000
+60;5.0;Streaming;14.00000
+64;6.0;Carburant;150.00000
+66;6.0;Assurance véhicule;130.00000
+69;6.0;Autoroute;25.00000
+77;7.0;Loyer;390.00000
+87;9.0;Restauration;100.00000
+88;9.0;Cantine;100.00000
+97;10.0;Bancaire;130.00000
+110;16.0;Don;10.00000
+111;16.0;Famille;200.00000
+114;1.0;Sac;
+115;9.0;Bricolage;
+116;1.0;Eau;
+117;3.0;Parfum;
