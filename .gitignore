@@ -1,4 +1,4 @@
-.DS_Store
+*/.DS_Store
 2-DATA/BACKUP/FLUX.csv
 2-DATA/BACKUP/VUE_FLUX.csv
 2-DATA/BACKUP/VUE_FLUX_MAct.csv
@@ -7,3 +7,4 @@
 2-DATA/Target.xlsx
 3-GUI/__pycache__
 4-REPORT/Dashboard.pbix
+4-REPORT/Dashboard.pdf
